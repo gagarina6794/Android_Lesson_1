@@ -3,7 +3,7 @@
     <string name="background">background</string>
     <string name="hello">Hello World!</string>
     <string name="to_home">to Home</string>
-    <string name="cat">Cat</string>
-    <string name="dog">Dog</string>
-    <string name="cthulhu">Cthulhu</string>
+    <string name="cat">cat</string>
+    <string name="dog">dog</string>
+    <string name="cthulhu">cthulhu</string>
 </resources>

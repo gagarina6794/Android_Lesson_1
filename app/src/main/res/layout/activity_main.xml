@@ -43,6 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
+            android:onClick="onButtonClickWalk"
             android:text="@string/cat" />
 
         <LinearLayout
@@ -55,6 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
+                android:onClick="onButtonClickWalk"
                 android:text="@string/dog" />
 
             <Button
@@ -62,6 +64,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_margin="15dp"
+                android:onClick="onButtonClickWalk"
                 android:text="@string/cthulhu" />
 
         </LinearLayout>
