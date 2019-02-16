@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
+import android.view.animation.RotateAnimation;
 import android.view.animation.TranslateAnimation;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -16,6 +18,7 @@ public class WalkActivity extends AppCompatActivity {
     private int width;
     private int startHeight;
     private int startWidth;
+    private float startDegrees;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +49,7 @@ public class WalkActivity extends AppCompatActivity {
             public void run() {
                 height = frameLayout.getHeight();
                 width = frameLayout.getWidth();
+                imageView.setRotation(-90);
                 startAnimation();
             }
         });
@@ -56,10 +60,9 @@ public class WalkActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-   private Animation.AnimationListener animationListener = new Animation.AnimationListener() {
+    private Animation.AnimationListener animationListener = new Animation.AnimationListener() {
         @Override
         public void onAnimationStart(Animation animation) {
-
         }
 
         @Override
@@ -74,14 +77,26 @@ public class WalkActivity extends AppCompatActivity {
     };
 
     private void startAnimation() {
+        AnimationSet animationSet = new AnimationSet(true);
         int endHeight = (int) (Math.random() * (height + 1 - imageView.getHeight()));
         int endWidth = (int) (Math.random() * (width + 1 - imageView.getWidth()));
+        float rotate = (float) Math.toDegrees(Math.atan2(startHeight - endHeight, startWidth - endWidth));
+        RotateAnimation animation = new RotateAnimation(startDegrees, rotate, 1, 0.5f, 1, 0.5f);
+
+        animation.setDuration(500);
+
         Animation translateAnimation = new TranslateAnimation(startWidth, endWidth, startHeight, endHeight);
+
         startHeight = endHeight;
         startWidth = endWidth;
+        startDegrees = rotate;
         translateAnimation.setDuration(1000);
-        translateAnimation.setAnimationListener(animationListener);
-        imageView.startAnimation(translateAnimation);
+        translateAnimation.setStartOffset(500);
+        animationSet.addAnimation(animation);
+        animationSet.addAnimation(translateAnimation);
+        animationSet.setAnimationListener(animationListener);
+        imageView.startAnimation(animationSet);
+
     }
 
 }
