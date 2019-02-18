@@ -16,7 +16,10 @@
     <ImageView
         android:id="@+id/pet"
         android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:layout_height="100dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
 
     <ImageButton
         android:id="@+id/toHomeWalk"
@@ -24,8 +27,8 @@
         android:layout_height="50dp"
         android:layout_gravity="bottom"
         android:layout_margin="1dp"
-        android:onClick="onButtonClick"
         android:background="@drawable/home"
-        android:contentDescription="@string/to_home" />
+        android:contentDescription="@string/to_home"
+        android:onClick="onButtonClick" />
 
 </FrameLayout>
