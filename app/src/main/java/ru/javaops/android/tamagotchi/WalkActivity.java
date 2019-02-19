@@ -32,6 +32,7 @@ public class WalkActivity extends AppCompatActivity {
         int imageSource;
         int soundSource;
 
+
         switch (pet) {
             case "cat":
                 imageSource = R.drawable.cat;
@@ -110,6 +111,14 @@ public class WalkActivity extends AppCompatActivity {
         RotateAnimation animation = new RotateAnimation(startDegrees, rotate, 1, 0.5f, 1, 0.5f);
         Animation translateAnimation = new TranslateAnimation(startWidth, endWidth, startHeight, endHeight);
 
+        //imageView.animate().setStartDelay(1000).x(endHeight).y(endWidth).setDuration(2000);
+
+//        Path path = new Path();
+//        path.rQuadTo(startWidth,endWidth,startHeight,endHeight);
+//        objectAnimator = ObjectAnimator.ofFloat(imageView, "y");
+//        objectAnimator.setDuration(3000);
+//        objectAnimator.start();
+
         startHeight = endHeight;
         startWidth = endWidth;
         startDegrees = rotate;
@@ -122,7 +131,9 @@ public class WalkActivity extends AppCompatActivity {
         animationSet.addAnimation(animation);
         animationSet.addAnimation(translateAnimation);
         animationSet.setAnimationListener(animationListener);
+
         imageView.startAnimation(animationSet);
+
     }
 
 }
