@@ -3,4 +3,36 @@
     <string name="background">background</string>
     <string name="hello">Hello World!</string>
     <string name="to_home">to Home</string>
+    <string name="cat">Cat</string>
+    <string name="dog">Dog</string>
+    <string name="cthulhu">Cthulhu</string>
+    <string name="pet">pet</string>
+    <string name="pets">Питомцы</string>
+    <string name="notification">Уведомления</string>
+    <string name="history">История</string>
+    <string name="sound">Звук</string>
+    <string name="create_new_pet">Создать питомца</string>
+    <string name="change_pet">Сменить питомца</string>
+    <string name="change_name">Сменить имя</string>
+    <string name="delete_pet">Удаление питомцев</string>
+    <string name="back">back</string>
+    <string name="ok">ОК</string>
+    <string name="cancel">Отмена</string>
+    <string name="name">Name</string>
+    <string name="pets_input">Выберите питомца:</string>
+    <string name="create_pet">Создание питомца</string>
+    <string name="input_name">Введите имя:</string>
+    <string name="sort_on">Сортировка по</string>
+    <string name="pet_icon">pet icon</string>
+
+    <string-array name="pets">
+        <item>Кошка</item>
+        <item>Собака</item>
+        <item>Ктулху</item>
+    </string-array>
+
+    <string-array name="sort">
+        <item>имени</item>
+        <item>уровню</item>
+    </string-array>
 </resources>
