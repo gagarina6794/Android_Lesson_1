@@ -12,7 +12,15 @@
         android:src="@drawable/android_background"
         android:contentDescription="@string/background" />
 
+    <ImageView
+        android:id="@+id/petView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/pet" />
+
     <TextView
+        android:id="@+id/petName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -31,4 +39,13 @@
         android:layout_margin="20dp"
         android:onClick="onButtonClick"
         android:text="@string/hello" />
+
+    <Button
+        android:id="@+id/goWalk"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="end|bottom"
+        android:layout_margin="10dp"
+        android:onClick="goWalk"
+        android:background="@drawable/walk" />
 </FrameLayout>
